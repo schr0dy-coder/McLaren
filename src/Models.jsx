@@ -205,7 +205,7 @@ const Models = () => {
     : mclarenCars.filter(car => car.series === selectedSeries);
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 px-4">
+    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 px-4" id='models-section'>
       <style jsx>{`
         @keyframes fadeInUp {
           from {

@@ -31,7 +31,6 @@ Ghost Gray
 
 
 */
-@import "tailwindcss";
 
 * {
   margin: 0;
@@ -997,6 +996,10 @@ body {
   color: var(--primary-orange);
 }
 
+
+#models-section{
+  margin-top: 4%;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-container {
