@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight, Zap, Gauge, DollarSign, Calendar } from 'lucide-react';
 import CarCard from './CarCard';
-import "tailwindcss";
 
 const mclarenCars = [
   {
@@ -197,77 +196,50 @@ const mclarenCars = [
 
 const Models = () => {
   const [selectedSeries, setSelectedSeries] = useState("All");
-  
   const series = ["All", "Ultimate Series", "Super Series", "GT Series", "Sports Series"];
-  
-  const filteredCars = selectedSeries === "All" 
-    ? mclarenCars 
+  const filteredCars = selectedSeries === "All"
+    ? mclarenCars
     : mclarenCars.filter(car => car.series === selectedSeries);
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-16 px-4" id='models-section'>
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fadeInUp {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-      `}</style>
-      
-      <div className="max-w-7xl mx-auto">
+    <section className="models-section" id="models-section">
+      <div className="models-container">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            McLaren <span className="text-orange-500">Models</span>
+        <div className="models-header">
+          <h1>
+            McLaren <span>Models</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the complete range of McLaren supercars, from everyday sports cars to track-focused hypercars.
-          </p>
+          <p>Discover the complete range of McLaren supercars, from everyday sports cars to track-focused hypercars.</p>
         </div>
-        
+
         {/* Series Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="series-filter">
           {series.map((seriesName) => (
             <button
               key={seriesName}
               onClick={() => setSelectedSeries(seriesName)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedSeries === seriesName
-                  ? 'bg-orange-500 text-white shadow-lg'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
+              className={`series-button ${selectedSeries === seriesName ? 'active' : ''}`}
             >
               {seriesName}
             </button>
           ))}
         </div>
-        
+
         {/* Cars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="cars-grid">
           {filteredCars.map((car, index) => (
             <CarCard key={`${car.model}-${index}`} car={car} index={index} />
           ))}
         </div>
-        
+
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 text-gray-400">
-            <Calendar className="w-5 h-5" />
+        <div className="models-cta">
+          <div className="models-cta-text">
+            <Calendar />
             <span>Configure your McLaren today</span>
           </div>
-          <div className="mt-4">
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold px-8 py-4 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Build & Configure
-            </button>
+          <div className="models-cta-button">
+            <button>Build & Configure</button>
           </div>
         </div>
       </div>
