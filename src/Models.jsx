@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, Zap, Gauge, DollarSign, Calendar } from 'lucide-react';
 import CarCard from './CarCard';
+import Footer from './Footer';
 
 const mclarenCars = [
   {
@@ -202,6 +203,7 @@ const Models = () => {
     : mclarenCars.filter(car => car.series === selectedSeries);
 
   return (
+    <>
     <section className="models-section" id="models-section">
       <div className="models-container">
         {/* Header */}
@@ -244,6 +246,8 @@ const Models = () => {
         </div>
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 
