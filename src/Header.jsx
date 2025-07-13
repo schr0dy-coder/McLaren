@@ -69,7 +69,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     Models
                   </button>
                 </li>
-
+{/* 
                 <li className="nav-item">
                   <button
                     onClick={() => handleNavClick("bespoke")}
@@ -79,7 +79,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                   >
                     Bespoke
                   </button>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <button
                     onClick={() => handleNavClick("racing")}

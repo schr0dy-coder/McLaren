@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, Zap, Gauge, DollarSign } from 'lucide-react';
 
-const CarCard = ({ car, index }) => {
+const CarCard = ({ car, index, onLearnMore }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const getSeriesColor = (series) => {
@@ -31,10 +31,10 @@ const CarCard = ({ car, index }) => {
         {car.series}
       </div>
 
-      {/* Car Image Placeholder */}
-      <div className="car-image-placeholder">
+      {/* Car Image Container */}
+      <div className="car-image-container">
+        <img src={car.image} alt={`${car.model}`} className="car-image" />
         <div className="car-image-effect"></div>
-        <div className="car-silhouette"></div>
         <div className="car-model-name">
           <h3>{car.model}</h3>
         </div>
@@ -91,6 +91,7 @@ const CarCard = ({ car, index }) => {
         {/* Learn More Button */}
         <button
           className="learn-more-button"
+          onClick={() => onLearnMore && onLearnMore(car)}
           style={{
             background: isHovered
               ? `linear-gradient(to right, ${getSeriesColor(car.series)}, var(--primary-orange))`

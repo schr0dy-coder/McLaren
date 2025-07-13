@@ -337,3 +337,52 @@
   box-shadow: 0 10px 15px var(--glass-shadow);
   transform: scale(1.05);
 }
+.car-image-container {
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .car-image-container {
+    height: 14rem;
+  }
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills container while maintaining aspect ratio */
+  display: block;
+}
+
+.car-image-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+
+.car-card:hover .car-image-effect {
+  transform: translateX(-200%);
+}
+
+.car-model-name {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--background-gray);
+  text-shadow: 0 2px 4px var(--glass-shadow); /* Improves readability over image */
+}
+
+.car-model-name h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .car-model-name h3 {
+    font-size: 1.5rem;
+  }
+}

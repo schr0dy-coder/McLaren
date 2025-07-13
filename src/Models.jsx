@@ -3,6 +3,14 @@ import { ChevronRight, Zap, Gauge, DollarSign, Calendar } from 'lucide-react';
 import CarCard from './CarCard';
 import Footer from './Footer';
 
+import ml750s from './assets/ml750s/front.webp';
+import mlgt from './assets/mlgt/frontside.webp';
+import ml720s from './assets/ml720s/front.jpg';
+import mlartura from './assets/mlartura/front.webp';
+import ml570s from './assets/ml570s/frontside.jpeg';
+import ml765lt from './assets/ml765lt/fronttop.webp';
+import mlw1 from './assets/mlw1/fronttop.webp'
+
 const mclarenCars = [
   {
     series: "Super Series",
@@ -29,7 +37,8 @@ const mclarenCars = [
       "4.0L twin-turbo V8",
       "Active rear wing",
       "Proactive Chassis Control III"
-    ]
+    ],
+    image: ml750s
   },
   {
     series: "GT Series",
@@ -56,7 +65,8 @@ const mclarenCars = [
       "Large luggage space",
       "Comfort mode suspension",
       "Dihedral doors"
-    ]
+    ],
+    image: mlgt
   },
   {
     series: "Super Series",
@@ -83,7 +93,8 @@ const mclarenCars = [
       "Dihedral doors",
       "Variable Drift Control",
       "Active aerodynamics"
-    ]
+    ],
+    image: ml720s
   },
   {
     series: "Sports Series",
@@ -110,12 +121,13 @@ const mclarenCars = [
       "Electric-only drive mode",
       "Lightweight carbon chassis",
       "Advanced infotainment"
-    ]
+    ],
+    image: mlartura
   },
   {
     series: "Sports Series",
     model: "McLaren 570S",
-    tagline: "Everyday usability, pure McLaren performance.",
+    tagline: "Everyday usability combined with pure McLaren performance.",
     stats: {
       horsepower: 562,
       zeroToSixty: "3.2s",
@@ -137,7 +149,8 @@ const mclarenCars = [
       "Carbon fiber monocoque",
       "Agile handling",
       "Daily drivability"
-    ]
+    ],
+    image: ml570s
   },
   {
     series: "Super Series",
@@ -164,7 +177,8 @@ const mclarenCars = [
       "Active aerodynamics",
       "Quad titanium exhaust",
       "Track-tuned suspension"
-    ]
+    ],
+    image: ml765lt
   },
   {
     series: "Ultimate Series",
@@ -191,7 +205,8 @@ const mclarenCars = [
       "F1-inspired tech",
       "Carbon fiber construction",
       "Record acceleration"
-    ]
+    ],
+    image: mlw1
   }
 ];
 
