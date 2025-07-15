@@ -1,0 +1,1028 @@
+/* styles.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* RacingPage Styles */
+.racing-page {
+  min-height: 100vh;
+}
+.hero-section-r {
+  position: relative;
+  height: 500px; /* Adjustable height for the hero section */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-background-r {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3a8a 0%, #9333ea 100%); /* Racing-inspired gradient */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.hero-background-r img{
+  width: 100vw;
+}
+
+.hero-overlay-r {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  z-index: 2;
+}
+
+.hero-content-r {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-logo-r {
+  margin-bottom: 1.5rem;
+}
+
+.logo-placeholder-r {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #facc15; /* Gold-like color for logo text */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #f97316, #dc2626);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Title and Subtitle */
+.hero-title-r {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-subtitle-r {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Stats Container and Grid */
+.hero-stats-container-r {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-stats-grid-r {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.stat-card-r {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #f97316;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.stat-card-r:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon-r {
+  margin-bottom: 1rem;
+}
+
+.icon-trophy-r::before {
+  content: "🏆"; /* Placeholder for trophy icon */
+  font-size: 1.5rem;
+}
+
+.icon-flag-r::before {
+  content: "🚩"; /* Placeholder for flag icon */
+  font-size: 1.5rem;
+}
+
+.icon-position-r::before {
+  content: "📍"; /* Placeholder for position icon */
+  font-size: 1.5rem;
+}
+
+.stat-value-r {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #facc15;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label-r {
+  font-size: 1rem;
+  color: #d1d5db;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navigation-tabs {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  border-bottom: 1px solid #374151;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+.tabs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: #1f2937;
+  color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
+.tab-button-active {
+  background-color: #f97316;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.team-legacy {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.legacy-description {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  max-width: 896px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.season-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: #f97316;
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.icon-orange {
+  color: #f97316;
+  width: 2rem;
+  height: 2rem;
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.stat-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.stat-subtitle {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.recent-achievements .achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievement-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.achievement-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.achievement-year {
+  width: 3rem;
+  height: 3rem;
+  background-color: #f97316;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.achievement-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.achievement-description {
+  color: #9ca3af;
+}
+
+.drivers-section .drivers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.driver-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.driver-card:hover {
+  border-color: #f97316;
+}
+
+.driver-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.driver-number-container {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to bottom right, #f97316, #dc2626);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.driver-number {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.driver-info {
+  flex: 1;
+}
+
+.driver-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.driver-nationality {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.driver-achievement {
+  font-size: 0.875rem;
+  color: #f97316;
+  margin-top: 0.25rem;
+}
+
+.driver-points-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #374151;
+}
+
+.driver-points {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.stats-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stats-season,
+.stats-all-time {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.stats-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.stats-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.stat-row:hover {
+  background-color: #374151;
+}
+
+.stat-row-highlight {
+  background-color: rgba(249, 115, 22, 0.2);
+}
+
+.stat-label {
+  color: #9ca3af;
+}
+
+.stat-value-highlight {
+  color: #f97316;
+}
+
+.team-section .team-info-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.team-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-details .info-list,
+.technical-details .info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-icon {
+  color: #f97316;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.info-label {
+  color: #9ca3af;
+  margin-right: 0.5rem;
+}
+
+.info-value {
+  color: #fff;
+}
+
+/* TeamStats Styles */
+.team-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.championship-history {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.championship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.championship-year {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #f97316, #dc2626);
+  border-radius: 0.5rem;
+}
+
+.year-value {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.year-label {
+  font-size: 0.75rem;
+  color: #fed7aa;
+}
+
+/* TeamInfo Styles */
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info-card {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: #f97316;
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.info-subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.leadership-section .leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.leadership-card {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.leadership-card:hover {
+  border-color: #f97316;
+}
+
+.leadership-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.leadership-icon-container {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to bottom right, #f97316, #dc2626);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leadership-icon {
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.leadership-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.leadership-position {
+  font-size: 0.875rem;
+  color: #f97316;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-background {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.technical-specs {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.technical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.technical-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.technical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.technical-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.technical-row:hover {
+  background-color: #374151;
+}
+
+.technical-label {
+  color: #9ca3af;
+}
+
+.technical-value {
+  color: #fff;
+  font-weight: 500;
+}
+
+.facilities-section .facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.facility-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.facility-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.facility-icon {
+  color: #f97316;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.facility-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.facility-location {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.facility-description {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.facility-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.facility-feature {
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+.partnerships-section .partnerships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.partnership-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.partnership-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.partnership-icon-container {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to bottom right, #f97316, #dc2626);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partnership-icon {
+  color: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.partnership-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.partnership-type {
+  font-size: 0.875rem;
+  color: #f97316;
+  margin-bottom: 0.5rem;
+}
+
+.partnership-description {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.partnership-since {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.heritage-section {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.heritage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heritage-text {
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* RaceCalendar Styles */
+.race-calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.race-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.race-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.race-card:hover {
+  border-color: #f97316;
+}
+
+.race-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.race-round {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.race-status .status-icon.completed {
+  color: #22c55e;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.race-status .status-icon.upcoming {
+  color: #f97316;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.race-status .status-icon.default {
+  color: #6b7280;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.race-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.race-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.race-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.info-icon {
+  color: #f97316;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.race-results {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #374151;
+}
+
+.results-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 0.5rem;
+}
+
+.driver-result {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.result-position.position-gold {
+  color: #facc15;
+}
+
+.result-position.position-silver {
+  color: #d1d5db;
+}
+
+.result-position.position-bronze {
+  color: #d97706;
+}
+
+.result-position.position-default {
+  color: #fff;
+}
+
+.total-points {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  font-weight: bold;
+}
+
+.race-details {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.details-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.details-content h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #f97316;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.close-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #ea580c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid,
+  .team-info-grid,
+  .leadership-grid,
+  .facilities-grid,
+  .partnerships-grid,
+  .championship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .race-list {
+    grid-template-columns: 1fr;
+  }
+}

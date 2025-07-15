@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, Zap, Gauge, DollarSign } from 'lucide-react';
 
-const CarCard = ({ car, index, onLearnMore }) => {
+const CarCard = ({ car, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const getSeriesColor = (series) => {
@@ -16,6 +16,15 @@ const CarCard = ({ car, index, onLearnMore }) => {
         return "var(--accent-orange)";
       default:
         return "var(--primary-orange)";
+    }
+  };
+
+  // Handle opening the car's link in a new tab
+  const handleLearnMore = () => {
+    if (car.link) {
+      window.open(car.link, '_blank', 'noopener,noreferrer');
+    } else {
+      console.error('No link provided for this car');
     }
   };
 
@@ -91,16 +100,17 @@ const CarCard = ({ car, index, onLearnMore }) => {
         {/* Learn More Button */}
         <button
           className="learn-more-button"
-          onClick={() => onLearnMore && onLearnMore(car)}
+          onClick={handleLearnMore}
           style={{
             background: isHovered
               ? `linear-gradient(to right, ${getSeriesColor(car.series)}, var(--primary-orange))`
               : undefined,
           }}
+          aria-label={`Learn more about ${car.model}`}
         >
           Learn More
         </button>
-      </div>
+      </ div>
     </div>
   );
 };

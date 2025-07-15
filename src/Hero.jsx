@@ -18,6 +18,11 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, [images.length]);
+
+  const p1link = "https://cars.mclaren.com/en/legacy/mclaren-p1"
+  const handleSpecificationbtn = () => {
+    window.open(p1link, '_blank')
+  }
   return (
     <>
       <div className="hero-background">
@@ -41,8 +46,12 @@ const Hero = () => {
               experience.
             </p>
             <div className="hero-cta">
-              <button className="cta-primary">Explore P1</button>
-              <button className="cta-secondary">Book Test Drive</button>
+              <button className="cta-primary" onClick={handleSpecificationbtn}>Explore P1</button>
+              <button className="cta-secondary"
+                onClick={() => {
+                  window.open("https://cars.mclaren.com/en/experiences", '_blank')
+                }}
+              >Book Test Drive</button>
             </div>
           </div>
 
@@ -69,7 +78,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <button className="specs-cta">View Full Specifications</button>
+              <button className="specs-cta" onClick={handleSpecificationbtn}>View Full Specifications</button>
             </div>
           </div>
         </div>

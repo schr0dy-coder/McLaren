@@ -4,12 +4,23 @@ import CarCard from './CarCard';
 import Footer from './Footer';
 
 import ml750s from './assets/ml750s/front.webp';
-import mlgt from './assets/mlgt/frontside.webp';
+import mlgt from './assets/mlgt/og.webp';
 import ml720s from './assets/ml720s/front.jpg';
 import mlartura from './assets/mlartura/front.webp';
 import ml570s from './assets/ml570s/frontside.jpeg';
 import ml765lt from './assets/ml765lt/fronttop.webp';
 import mlw1 from './assets/mlw1/fronttop.webp'
+
+
+const links  = [
+  "https://cars.mclaren.com/en/750s", 
+  "https://cars.mclaren.com/en/new-mclaren-gt",
+  "https://cars.mclaren.com/en/super-series/720s",
+  "https://cars.mclaren.com/en/artura",
+  "https://cars.mclaren.com/en/sports-series/570s",
+  "https://cars.mclaren.com/en/super-series/765lt",
+  "https://cars.mclaren.com/en/W1"
+]
 
 const mclarenCars = [
   {
@@ -38,7 +49,8 @@ const mclarenCars = [
       "Active rear wing",
       "Proactive Chassis Control III"
     ],
-    image: ml750s
+    image: ml750s,
+    link : links[0]
   },
   {
     series: "GT Series",
@@ -66,7 +78,8 @@ const mclarenCars = [
       "Comfort mode suspension",
       "Dihedral doors"
     ],
-    image: mlgt
+    image: mlgt,
+    link : links[1]
   },
   {
     series: "Super Series",
@@ -94,7 +107,8 @@ const mclarenCars = [
       "Variable Drift Control",
       "Active aerodynamics"
     ],
-    image: ml720s
+    image: ml720s,
+    link : links[2]
   },
   {
     series: "Sports Series",
@@ -122,7 +136,8 @@ const mclarenCars = [
       "Lightweight carbon chassis",
       "Advanced infotainment"
     ],
-    image: mlartura
+    image: mlartura,
+    link : links[3]
   },
   {
     series: "Sports Series",
@@ -150,7 +165,8 @@ const mclarenCars = [
       "Agile handling",
       "Daily drivability"
     ],
-    image: ml570s
+    image: ml570s,
+    link : links[4]
   },
   {
     series: "Super Series",
@@ -178,7 +194,8 @@ const mclarenCars = [
       "Quad titanium exhaust",
       "Track-tuned suspension"
     ],
-    image: ml765lt
+    image: ml765lt,
+    link : links[5]
   },
   {
     series: "Ultimate Series",
@@ -206,7 +223,8 @@ const mclarenCars = [
       "Carbon fiber construction",
       "Record acceleration"
     ],
-    image: mlw1
+    image: mlw1,
+    link : links[6]
   }
 ];
 
@@ -249,16 +267,7 @@ const Models = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="models-cta">
-          <div className="models-cta-text">
-            <Calendar />
-            <span>Configure your McLaren today</span>
-          </div>
-          <div className="models-cta-button">
-            <button>Build & Configure</button>
-          </div>
-        </div>
+        
       </div>
     </section>
     <Footer />

@@ -31,7 +31,6 @@ Ghost Gray
 
 
 */
-
 * {
   margin: 0;
   padding: 0;
@@ -1132,6 +1131,9 @@ body {
   .navbar-toggle {
     display: flex;
   }
+  .hero-text{
+    margin-top: 50%;
+  }
 
   .hero-content {
     flex-direction: column;
@@ -1143,6 +1145,7 @@ body {
   }
 
   .hero-specs {
+    display: none;
     margin-left: 0;
     max-width: 100%;
   }

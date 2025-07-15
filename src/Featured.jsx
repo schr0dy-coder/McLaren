@@ -13,7 +13,7 @@ const Featured = () => {
       horsepower: "903",
       description: "The pinnacle of automotive engineering. Where Formula 1 technology meets uncompromising performance.",
       acceleration: "2.8s",
-      onLearnMore: () => console.log("Learn more about P1")
+      link: 'https://cars.mclaren.com/en/legacy/mclaren-p1'
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Featured = () => {
       horsepower: "710",
       description: "Revolutionary aerodynamics and hybrid technology. The future of McLaren's Ultimate Series.",
       acceleration: "2.9s",
-      onLearnMore: () => console.log("Learn more about 720S")
+      link: 'https://cars.mclaren.com/en/super-series/720s'
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Featured = () => {
       horsepower: "740",
       description: "Open-top exhilaration meets track-focused performance. The 750S Spider delivers pure driving pleasure.",
       acceleration: "2.8s",
-      onLearnMore: () => console.log("Learn more about 750S Spider")
+      link: 'https://cars.mclaren.com/en/super-series/720s-spider'
     }
   ];
 
@@ -53,7 +53,7 @@ const Featured = () => {
               horsepower={model.horsepower}
               description={model.description}
               acceleration={model.acceleration}
-              onLearnMore={model.onLearnMore}
+              link={model.link}
             />
           ))}
         </div>

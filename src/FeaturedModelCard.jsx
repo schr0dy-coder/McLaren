@@ -6,7 +6,7 @@ const FeaturedModelCard = ({
   horsepower, 
   description, 
   acceleration, 
-  onLearnMore 
+  link
 }) => {
   return (
     <div className="featured-card">
@@ -28,7 +28,9 @@ const FeaturedModelCard = ({
       <div className="card-content">
         <h3 className="card-title">{modelName}</h3>
         <p className="card-description">{description}</p>
-        <button className="card-cta" onClick={onLearnMore}>
+        <button className="card-cta" onClick={() => {
+          window.open(link, '_blank')
+        }}>
           Learn More
         </button>
       </div>

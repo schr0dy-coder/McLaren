@@ -1,8 +1,14 @@
 import React from 'react'
+import OwnerShipPage from './OwnerShipPage'
+import Footer from './Footer'
+
 
 const Ownership = () => {
   return (
-    <div>Ownership</div>
+    <>
+    <OwnerShipPage />
+    <Footer />
+    </>
   )
 }
 
