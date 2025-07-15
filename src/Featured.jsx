@@ -63,11 +63,11 @@ const Featured = () => {
             <div className="stat-text">Years of Innovation</div>
           </div>
           <div className="stat-group">
-            <div className="stat-number">8</div>
+            <div className="stat-number">9</div>
             <div className="stat-text">F1 Championships</div>
           </div>
           <div className="stat-group">
-            <div className="stat-number">6</div>
+            <div className="stat-number">7</div>
             <div className="stat-text">Current Models</div>
           </div>
           <div className="stat-group">
